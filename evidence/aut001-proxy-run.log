@@ -1,0 +1,45 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> qa-ui-automation-playwright@1.0.0 test:login
+> playwright test --grep AUT-001 --trace on
+
+
+Running 1 test using 1 worker
+
+(node:30) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/saucedemo.spec.js:3:1 › AUT-001 | Login válido exibe o catálogo (5.0s)
+
+
+  1) [chromium] › tests/saucedemo.spec.js:3:1 › AUT-001 | Login válido exibe o catálogo ────────────
+
+    Error: page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://www.saucedemo.com/
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+      2 |
+      3 | test('AUT-001 | Login válido exibe o catálogo', async ({ page }, testInfo) => {
+    > 4 |   await page.goto('/');
+        |              ^
+      5 |   await page.getByPlaceholder('Username', { exact: true }).fill('standard_user');
+      6 |   await page.getByPlaceholder('Password', { exact: true }).fill('secret_sauce');
+      7 |   await page.getByRole('button', { name: 'Login', exact: true }).click();
+        at /workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/tests/saucedemo.spec.js:4:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/saucedemo-AUT-001-Login-válido-exibe-o-catálogo-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/saucedemo-AUT-001-Login-válido-exibe-o-catálogo-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/saucedemo-AUT-001-Login-válido-exibe-o-catálogo-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/saucedemo-AUT-001-Login-válido-exibe-o-catálogo-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/saucedemo.spec.js:3:1 › AUT-001 | Login válido exibe o catálogo ─────────────
