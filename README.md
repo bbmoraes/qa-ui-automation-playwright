@@ -4,13 +4,16 @@ Projeto educacional de **Bianca Moraes**: cinco testes funcionais reais do [Sauc
 
 Construção, execução e documentação assistidas por IA. A reprodução independente pela estudante e a execução no seu Windows ainda não foram avaliadas.
 
+[![Playwright Tests](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/workflows/playwright.yml)
+
 ## Resultado verificado
 
 | Execução final | Passed | Failed | Skipped | Flaky | Retries |
 |---|---:|---:|---:|---:|---:|
-| EX-AUTO-001 · 21/10/2026 · 28,8 s | 5 | 0 | 0 | 0 | 0 |
+| EX-AUTO-001 · remoto · 21/10/2026 · 28,8 s | 5 | 0 | 0 | 0 | 0 |
+| CI-001 · GitHub Actions · 22/10/2026 UTC · 4,0 s | 5 | 0 | 0 | 0 | 0 |
 
-**Ambiente executado:** Linux remoto, Node 24.19.0, Playwright Test 1.64.1 e Chromium 153.0.8010.0 alternativo. O Chromium padrão do Playwright não pôde ser baixado neste ambiente. O resultado está limitado à combinação executada, com requisições de terceiros bloqueadas. [Relatório e histórico completos](docs/test-execution.md).
+**Ambiente executado:** Linux remoto, Node 24.19.0, Playwright Test 1.64.1 e Chromium 153.0.8010.0 alternativo. O Chromium padrão do Playwright não pôde ser baixado neste ambiente. Esse resultado local está limitado à combinação executada, com requisições de terceiros bloqueadas. A execução separada no GitHub Actions também passou com o Chromium padrão instalado pelo Playwright. [Relatório e histórico completos](docs/test-execution.md).
 
 ## Cenários
 
@@ -81,14 +84,16 @@ A configuração aceita opcionalmente PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH e PLAY
 
 ## GitHub Actions
 
-**Publicação autorizada; verificação do GitHub Actions em andamento.** O arquivo [.github/workflows/playwright.yml](.github/workflows/playwright.yml) instala Node 24, usa npm ci, instala Chromium padrão, executa a suíte e disponibiliza relatórios mesmo quando os testes falham. O novo repositório foi criado com aprovação da estudante.
+**Publicado e executado com sucesso.** A [execução #1](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211) passou os cinco testes em **4,0 s**, sem retries, no commit `063f313`. O workflow completo levou 5 min 36 s, incluindo instalação. O arquivo [.github/workflows/playwright.yml](.github/workflows/playwright.yml) instala Node 24, usa npm ci, instala Chromium padrão, executa a suíte e disponibiliza relatórios mesmo quando os testes falham. O novo repositório foi criado com aprovação da estudante.
 
-O resultado local não comprova que o CI passou. O resultado real será documentado com o link da execução na seção GitHub Actions deste projeto.
+O [artefato playwright-report-1](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211/artifacts/12398131844) foi disponibilizado (1,02 MB, retenção de 14 dias). Contém relatório HTML e resultados da execução. Após baixar e extrair, execute `npx playwright show-report playwright-report`. A configuração normal retém traces apenas em falhas; não se espera trace de testes aprovados no CI. O [registro CI-001](evidence/ci-execution.json) mantém o resultado e os links após a expiração do artefato.
+
+Alterações em código disparam testes automaticamente. O workflow ignora mudanças apenas em Markdown e evidências, para evitar repetir a suíte ao documentar o resultado.
 
 ## Aprendizados e próximos passos
 
 [Plano de testes](docs/test-plan.md) · [Execução e limitações](docs/test-execution.md) · [Explicação do código e entrevista](docs/learning-notes.md).
 
-Próximos passos: Bianca reproduzir os testes no Windows, modificar um cenário sozinha e validar a execução com o navegador padrão e no GitHub Actions. A suíte não cobre todos os cenários, navegadores, acessibilidade, carga, segurança ou APIs. Nenhum defeito funcional novo foi confirmado nesses cinco testes.
+Próximos passos: Bianca reproduzir os testes no Windows, modificar um cenário sozinha e comparar o relatório com a execução já verificada no GitHub Actions. A suíte não cobre todos os cenários, navegadores, acessibilidade, carga, segurança ou APIs. Nenhum defeito funcional novo foi confirmado nesses cinco testes.
 
 As tentativas iniciais de preparação estão documentadas, incluindo problemas de navegador, proxy, certificado e a revisão automática que motivou o bloqueio de terceiros. Elas não foram apagadas dos registros nem somadas ao resultado final.
