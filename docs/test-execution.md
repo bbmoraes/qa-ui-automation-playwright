@@ -21,7 +21,7 @@ Fontes: [resumo calculado](../evidence/execution-summary.json), [resultado JSON 
 - Linux remoto Ubuntu 24.04.3 LTS, x64; não é o Windows de Bianca.
 - Node.js 24.19.0; npm 11.9.0; Playwright Test 1.64.1, instalado no projeto com package-lock.json.
 - Chromium 153.0.8010.0, distribuído por @sparticuz/chromium 153.0.0, instalado separadamente apenas para este ambiente remoto.
-- A versão preferida do navegador para Playwright 1.64.1 seria Chromium 156.0.8078.4. Seu download retornou HTML “Site Unavailable”, não um ZIP. **A combinação com o navegador padrão não foi executada**, e este resultado não comprova compatibilidade com ela.
+- A versão preferida do navegador para Playwright 1.64.1 seria Chromium 156.0.8078.4. Seu download retornou HTML “Site Unavailable”, não um ZIP. **A combinação com o navegador padrão não foi executada neste ambiente remoto**. Ela foi validada separadamente no GitHub Actions, conforme CI-001 abaixo.
 - HTTPS permaneceu validado: o Chromium reconheceu a autoridade já fornecida no sistema remoto, por meio do armazenamento NSS. Não foi usado ignoreHTTPSErrors nem ignore-certificate-errors.
 - Proxy do próprio ambiente; seu endereço não está documentado no pacote público.
 - Viewport Desktop Chrome do Playwright, 1280 × 720; um worker; contextos independentes.
@@ -64,10 +64,33 @@ O relatório HTML e cinco traces finais estão em artifacts/final-run no pacote 
 | Workflow escrito | Publicado |
 | Novo repositório criado | Criado com aprovação |
 | Arquivos publicados | Código e evidências publicados |
-| GitHub Actions executado | Execução #1 em andamento; ainda sem resultado dos testes |
+| GitHub Actions executado | Execução #1 concluída com sucesso; 5 Passed |
 
-A publicação foi autorizada. Repositório: https://github.com/bbmoraes/qa-ui-automation-playwright. Primeira execução: https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211. O workflow usa o Chromium padrão instalado pelo Playwright no GitHub, não o binário remoto alternativo. Seu sucesso ainda precisa ser verificado em uma execução real.
+A publicação foi autorizada. Repositório: https://github.com/bbmoraes/qa-ui-automation-playwright. Primeira execução: https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211. O workflow usa o Chromium padrão instalado pelo Playwright no GitHub, não o binário remoto alternativo. Seu sucesso foi verificado nos logs e no resumo da execução.
+
+## Execução GitHub Actions — CI-001
+
+- Execução observada: [#1](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211), disparada por push em main.
+- Commit testado: `063f313f3c0e21bee51232f88630fc9e3ffc6930`.
+- Logs dos testes: 22/10/2026, 02:57:15–02:57:19 UTC (21/10, 23:57, America/Sao_Paulo).
+- Ambiente: runner GitHub ubuntu-latest, Node 24 configurado e Chromium padrão instalado por `npx playwright install --with-deps chromium`. A versão exata do binário não foi coletada.
+- Comando: `npm test`; resultado: **5 Passed, 0 Failed, 0 Skipped; sem retries (configuração 0)**.
+- Suíte: **4,0 s**; workflow completo: **5 min 36 s**; job: **5 min 34 s**. A instalação de dependências levou 5 min 1 s.
+
+| ID | Resultado | Duração no log |
+|---|---|---:|
+| AUT-001 | Passed | 621 ms |
+| AUT-002 | Passed | 404 ms |
+| AUT-003 | Passed | 538 ms |
+| AUT-004 | Passed | 781 ms |
+| AUT-005 | Passed | 788 ms |
+
+[Artefato playwright-report-1](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211/artifacts/12398131844): disponibilidade observada na interface, 1,02 MB, retenção configurada de 14 dias. Contém as pastas playwright-report e test-results enviadas pelo workflow. O conteúdo binário não foi baixado nesta verificação. [Registro estruturado](../evidence/ci-execution.json).
+
+Os cinco traces do pacote entregue pertencem à execução local com --trace on. O CI usa retain-on-failure; como todos passaram, não há expectativa de traces de falha. As capturas anexadas após os expect fazem parte do relatório.
+
+O GitHub exibiu um aviso de migração do runtime de actions/upload-artifact@v4 e um comunicado sobre ubuntu-latest. Não impediram testes nem upload. A atualização dessa action pode ser tratada em manutenção futura com nova validação.
 
 ## Aprendizagem e limites
 
-Construção, execução e documentação assistidas por IA. A reprodução no computador de Bianca e sua execução independente ainda não foram avaliadas. Não há homologação de produção ou cobertura completa. Próxima etapa: executar no Windows com Chromium padrão e verificar CI após aprovação da publicação.
+Construção, execução e documentação assistidas por IA. A reprodução no computador de Bianca e sua execução independente ainda não foram avaliadas. Não há homologação de produção ou cobertura completa. Próxima etapa: executar no Windows com Chromium padrão e comparar sua reprodução com o CI já verificado.
