@@ -1,0 +1,58 @@
+{
+  "execution": "EX-AUTO-001",
+  "startTimeUTC": "2026-10-22T02:35:55.988Z",
+  "timezone": "America/Sao_Paulo",
+  "startedLocal": "2026-10-21T23:35:55.988000-03:00",
+  "runner": "Playwright Test 1.64.1",
+  "node": "v24.19.0",
+  "npm": "11.9.0",
+  "os": "Ubuntu 24.04.3 LTS Linux x64 (remote)",
+  "browser": "Chromium 153.0.8010.0 via @sparticuz/chromium 153.0.0",
+  "preferredBundledBrowserExecuted": false,
+  "durationMs": 28841.745,
+  "passed": 5,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "retries": 0,
+  "thirdPartyRequests": "blocked by context.route; serviceWorkers blocked",
+  "httpsValidation": "enabled; pre-existing runtime CA recognized by Chromium NSS",
+  "ciStatus": "workflow prepared; not published or executed",
+  "tests": [
+    {
+      "id": "AUT-001",
+      "title": "AUT-001 | Login válido exibe o catálogo",
+      "status": "passed",
+      "retry": 0,
+      "durationMs": 5636
+    },
+    {
+      "id": "AUT-002",
+      "title": "AUT-002 | Senha inválida impede acesso",
+      "status": "passed",
+      "retry": 0,
+      "durationMs": 5396
+    },
+    {
+      "id": "AUT-003",
+      "title": "AUT-003 | Produto correto aparece no carrinho",
+      "status": "passed",
+      "retry": 0,
+      "durationMs": 5542
+    },
+    {
+      "id": "AUT-004",
+      "title": "AUT-004 | Remover produto esvazia o carrinho",
+      "status": "passed",
+      "retry": 0,
+      "durationMs": 5675
+    },
+    {
+      "id": "AUT-005",
+      "title": "AUT-005 | Checkout fictício confirma o pedido",
+      "status": "passed",
+      "retry": 0,
+      "durationMs": 5759
+    }
+  ]
+}
