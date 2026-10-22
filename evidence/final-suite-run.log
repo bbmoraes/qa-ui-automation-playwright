@@ -1,0 +1,17 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> qa-ui-automation-playwright@1.0.0 test
+> playwright test --trace on
+
+
+Running 5 tests using 1 worker
+
+(node:30) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/saucedemo.spec.js:36:1 › AUT-001 | Login válido exibe o catálogo (5.6s)
+  ✓  2 [chromium] › tests/saucedemo.spec.js:45:1 › AUT-002 | Senha inválida impede acesso (5.4s)
+  ✓  3 [chromium] › tests/saucedemo.spec.js:57:1 › AUT-003 | Produto correto aparece no carrinho (5.5s)
+  ✓  4 [chromium] › tests/saucedemo.spec.js:67:1 › AUT-004 | Remover produto esvazia o carrinho (5.7s)
+  ✓  5 [chromium] › tests/saucedemo.spec.js:79:1 › AUT-005 | Checkout fictício confirma o pedido (5.8s)
+
+  5 passed (28.8s)
