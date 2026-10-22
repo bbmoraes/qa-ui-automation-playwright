@@ -1,0 +1,16 @@
+{
+  "name": "qa-ui-automation-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testes funcionais reais do SauceDemo com Playwright Test e JavaScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:login": "playwright test --grep AUT-001",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:trace": "playwright test --trace on",
+    "report": "playwright show-report"
+  },
+  "engines": { "node": ">=22 <27" },
+  "devDependencies": { "@playwright/test": "1.64.1" }
+}
