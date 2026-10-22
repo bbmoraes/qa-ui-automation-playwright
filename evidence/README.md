@@ -4,8 +4,12 @@ Os arquivos final-suite-run.log, final-results.json e execution-summary.json reg
 
 Os logs aut001-run.log, aut001-proxy-run.log e aut001-trusted-ca-run.log preservam tentativas iniciais de preparação. full-suite-run.log é parcial e não deve ser tratado como execução concluída. Leia docs/test-execution.md antes de interpretar resultados.
 
-Relatórios HTML e traces completos da execução final ficam em artifacts/final-run no pacote de entrega e, futuramente, nos artefatos do GitHub Actions. São gerados pelo executor e não fazem parte do código-fonte versionado. Na execução documentada, --trace on guardou também os testes aprovados. Sem essa opção, a configuração mantém traces somente em falhas.
+Relatórios HTML e traces completos da execução final ficam em artifacts/final-run no pacote de entrega ; a execução separada do CI está disponível no artefato do GitHub Actions. São gerados pelo executor e não fazem parte do código-fonte versionado. Na execução documentada, --trace on guardou também os testes aprovados. Sem essa opção, a configuração mantém traces somente em falhas.
 
+
+## GitHub Actions verificado
+
+[Execução #1](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211): 5 Passed em 4,0 s. [Relatório disponível](https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211/artifacts/12398131844), retenção de 14 dias. O [registro CI-001](ci-execution.json) preserva metadados e links. Os traces dos testes aprovados pertencem ao pacote local; o CI retém traces somente em falhas.
 
 ## Capturas reais da execução local
 
