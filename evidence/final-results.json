@@ -1,0 +1,369 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/node_modules/.bin/playwright",
+      "test",
+      "--trace",
+      "on"
+    ],
+    "configFile": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/playwright.config.js",
+    "rootDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 180000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/tests",
+        "snapshotDir": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "https://www.saucedemo.com",
+          "proxy": {
+            "server": "http://127.0.0.1:46381"
+          },
+          "testIdAttribute": "data-test",
+          "serviceWorkers": "block",
+          "screenshot": "only-on-failure",
+          "trace": "on",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "launchOptions": {
+            "executablePath": "/tmp/qa-pw-chromium"
+          },
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "saucedemo.spec.js",
+      "file": "saucedemo.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "AUT-001 | Login válido exibe o catálogo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5636,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T02:35:56.452Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "AUT-001-catalogo",
+                      "contentType": "image/png",
+                      "url": "https://github.com/user-attachments/assets/e13cef64-fd28-4b20-8342-80a101f81561"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results/saucedemo-AUT-001-Login-válido-exibe-o-catálogo-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "392e42d63633ac7f010b-405b8d3da2cada52055a",
+          "file": "saucedemo.spec.js",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "AUT-002 | Senha inválida impede acesso",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T02:36:02.234Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "AUT-002-erro-login",
+                      "contentType": "image/png",
+                      "url": "https://github.com/user-attachments/assets/142bc165-83b1-4ab3-bf2d-5bb305005f30"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results/saucedemo-AUT-002-Senha-inválida-impede-acesso-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "392e42d63633ac7f010b-39b2ee25c4e017ee9d32",
+          "file": "saucedemo.spec.js",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "AUT-003 | Produto correto aparece no carrinho",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T02:36:07.656Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "AUT-003-carrinho",
+                      "contentType": "image/png",
+                      "url": "https://github.com/user-attachments/assets/34e8148f-4ce1-4466-acdc-f011202e8ca7"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results/saucedemo-AUT-003-Produto-correto-aparece-no-carrinho-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "392e42d63633ac7f010b-ef1d0871825562820242",
+          "file": "saucedemo.spec.js",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "AUT-004 | Remover produto esvazia o carrinho",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T02:36:13.234Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "AUT-004-carrinho-vazio",
+                      "contentType": "image/png",
+                      "url": "https://github.com/user-attachments/assets/464382d9-f303-4480-ab1c-0d64866ba731"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results/saucedemo-AUT-004-Remover-produto-esvazia-o-carrinho-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "392e42d63633ac7f010b-2ffefece3a163c1437ee",
+          "file": "saucedemo.spec.js",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "AUT-005 | Checkout fictício confirma o pedido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T02:36:18.979Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "AUT-005-checkout-concluido",
+                      "contentType": "image/png",
+                      "url": "https://github.com/user-attachments/assets/7c0135d9-bbaf-4fc2-b415-9be9a752519b"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/scratch/587f2f4f6a77/qa-ui-automation-playwright/test-results/saucedemo-AUT-005-Checkout-fictício-confirma-o-pedido-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "392e42d63633ac7f010b-1783e273d09ebaf5b3b3",
+          "file": "saucedemo.spec.js",
+          "line": 79,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-22T02:35:55.988Z",
+    "duration": 28841.745,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "sanitizationNote": "Internal proxy and launch options omitted from the public copy; test outcomes unchanged.",
+  "publicationNote": "Binary screenshot bodies omitted from this public JSON copy. Outcomes unchanged; screenshots published separately in the evidence index."
+}
