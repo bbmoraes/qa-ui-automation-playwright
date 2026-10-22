@@ -17,7 +17,6 @@
   "retries": 0,
   "thirdPartyRequests": "blocked by context.route; serviceWorkers blocked",
   "httpsValidation": "enabled; pre-existing runtime CA recognized by Chromium NSS",
-  "ciStatus": "workflow prepared; not published or executed",
   "tests": [
     {
       "id": "AUT-001",
@@ -54,5 +53,12 @@
       "retry": 0,
       "durationMs": 5759
     }
-  ]
+  ],
+  "ciStatusAtLocalRun": "workflow prepared; not published or executed",
+  "githubActions": {
+    "status": "success",
+    "execution": "CI-001",
+    "runUrl": "https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211",
+    "record": "ci-execution.json"
+  }
 }
