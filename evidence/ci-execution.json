@@ -1,0 +1,64 @@
+{
+  "execution": "CI-001",
+  "source": "GitHub Actions summary and expanded test-step logs observed through browser",
+  "runNumber": 1,
+  "runUrl": "https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211",
+  "jobUrl": "https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211/job/119610701877",
+  "commit": "063f313f3c0e21bee51232f88630fc9e3ffc6930",
+  "status": "success",
+  "testLogStartUTC": "2026-10-22T02:57:15Z",
+  "testLogEndUTC": "2026-10-22T02:57:19Z",
+  "command": "npm test",
+  "runner": "ubuntu-latest",
+  "nodeConfigured": "24",
+  "browser": "Playwright-installed default Chromium; exact version not collected",
+  "suiteDurationSeconds": 4,
+  "workflowDurationSeconds": 336,
+  "jobDurationSeconds": 334,
+  "passed": 5,
+  "failed": 0,
+  "skipped": 0,
+  "retriesConfigured": 0,
+  "tests": [
+    {
+      "id": "AUT-001",
+      "status": "passed",
+      "durationMs": 621
+    },
+    {
+      "id": "AUT-002",
+      "status": "passed",
+      "durationMs": 404
+    },
+    {
+      "id": "AUT-003",
+      "status": "passed",
+      "durationMs": 538
+    },
+    {
+      "id": "AUT-004",
+      "status": "passed",
+      "durationMs": 781
+    },
+    {
+      "id": "AUT-005",
+      "status": "passed",
+      "durationMs": 788
+    }
+  ],
+  "artifact": {
+    "name": "playwright-report-1",
+    "url": "https://github.com/bbmoraes/qa-ui-automation-playwright/actions/runs/39713689211/artifacts/12398131844",
+    "displayedSize": "1.02 MB",
+    "retentionDays": 14,
+    "digest": "sha256:ffb860598ba36414a129300ece62e440e6fcb335e1dd93a08eb8fdd021b5c85b",
+    "availabilityVerified": true,
+    "downloadedAndInspected": false
+  },
+  "tracePolicy": "retain-on-failure; passing CI tests do not retain traces",
+  "annotations": [
+    "Node20 deprecation warning for actions/upload-artifact@v4 forced to Node24",
+    "ubuntu-latest migration notice"
+  ],
+  "independentWindowsExecution": "not evaluated"
+}
